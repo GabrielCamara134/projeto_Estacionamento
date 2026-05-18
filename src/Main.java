@@ -4,16 +4,15 @@ public class Main {
     public static void main(String[] args ){
         Scanner sc = new Scanner(System.in);
         Estacionamento estacionamento = new Estacionamento(10);
-        int opcao = 0;
-        String placa,modelo;
+        int opcao = 0, i = 0;
+        String placa, modelo;
 
         do{
             System.out.println("\n---Menu Estacionamento---");
-            System.out.println("1 - Registrar veiculo");
-            System.out.println("2-Registrar entrada");
-            System.out.println("3 - Registrar Saida");
-            System.out.println("4 - Exibir Vagas Livres");
-            System.out.println("5 - Sair");
+            System.out.println("1-Registrar entrada");
+            System.out.println("2 - Registrar Saida");
+            System.out.println("3 - Exibir Vagas Livres");
+            System.out.println("4 - Sair");
             System.out.print("Esolha um das opcoes:");
 
             String entradaOpcao = sc.nextLine().trim();
@@ -28,23 +27,34 @@ public class Main {
 
             switch(opcao){
                 case 1:
-
-                    System.out.println("Digite o numero da placa do veiculo:");
-                    placa = placa.nextLine();
-                    System.out.println("Digite o modelo do veiculo:");
-                    modelo = modelo.nextLine();
+                    if(i<11) {
+                        System.out.println("Digite o numero da placa do veiculo:");
+                        placa = sc.nextLine();
+                        System.out.println("Digite o modelo do veiculo:");
+                        modelo = sc.nextLine();
+                        Veiculo c1 = new Veiculo(placa, modelo);
+                        estacionamento.registrarEntrada(c1);
+                        System.out.println("Veiculo registrado com sucesso!");
+                        i++;
+                    }
 
                     break;
                 case 2:
-                    break;
+                    if(i>0) {
+                        System.out.print("Vamos registrar a saida do veiculo");
+                        System.out.println("Digite o numero da placa do veiculo:");
+                        placa = sc.nextLine();
+                        estacionamento.registrarSaida(placa);
+                        i--;
+                    }
+                        break;
                 case 3:
+                    estacionamento.exibirVagasLivres();
                     break;
                 case 4:
 
                     break;
-                case 5:
-                    estacionamento.exibirVagasLivres();
-                    break;
+
             }
 
         }while(opcao!=4);
