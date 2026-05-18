@@ -6,16 +6,26 @@ public class Estacionamento {
     private Tarifario tarifario;
 
     public Estacionamento(int totalVagas){
-         vagas = new ArrayList<Vaga>;
+         this.vagas = new ArrayList<Vaga>;
 
          for(int i = 0; i<=totalVagas; i++){
-
+             Vaga novaVaga = new Vaga(i);
+             this.vagas.add(novaVaga);
          }
     }
 
-    public void registrarEntrada(Veiculo carro){}
+    public void registrarEntrada(Veiculo carro){
 
-    public void registarSaida(String placa){}
+    }
 
-    public void exibirVagasLivres(){}
+    public void registarSaida(String placa){
+
+    }
+
+    public void exibirVagasLivres(){
+        for(Vaga vaga: vagas){
+            System.out.println("Vaga"  + vaga.getNumero() + " Livre");
+        }
+
+    }
 }

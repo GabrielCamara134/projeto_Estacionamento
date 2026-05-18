@@ -3,7 +3,15 @@ public class Vaga {
     private boolean ocupada = false;
     private Veiculo veiculoEstacionado;
 
-    public void estacionar(Veiculo carro){}
+    public int getNumero(){
+        return this.numero;
+    }
 
-    public void liberar(){}
+    public void estacionar(Veiculo carro){
+
+    }
+
+    public void liberar(){
+
+    }
 }
