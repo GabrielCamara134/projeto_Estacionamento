@@ -52,7 +52,7 @@ public class Main {
                     estacionamento.exibirVagasLivres();
                     break;
                 case 4:
-
+                    System.out.println("Tchau!!");
                     break;
 
             }
