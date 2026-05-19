@@ -12,6 +12,7 @@ public class Vaga {
         return this.numero;
     }
     public boolean getOcupada(){
+
         return this.ocupada;
     }
     public Veiculo getVeiculoEstacionado(){

@@ -7,21 +7,27 @@ public class Ticket {
     private boolean usado = false;
 
     public Veiculo getCarro() {
+
         return carro;
     }
     public void setCarro(Veiculo carro) {
+
         this.carro = carro;
     }
     public void setHoraEntrada(LocalDateTime horaEntrada){
+
         this.horaEntrada = horaEntrada;
     }
     public void setHoraSaida(LocalDateTime horaSaida){
+
         this.horaSaida = horaSaida;
     }
     public boolean getUsado() {
+
         return usado;
     }
     public void setUsado(boolean usado) {
+
         this.usado = usado;
     }
 
@@ -30,6 +36,7 @@ public class Ticket {
     }
 
     public int calcularTempoEmHoras(){
+
         return this.horaEntrada.getHour()-this.horaSaida.getHour();
     }
 }

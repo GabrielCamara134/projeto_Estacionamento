@@ -9,7 +9,7 @@ public class Main {
 
         do{
             System.out.println("\n---Menu Estacionamento---");
-            System.out.println("1-Registrar entrada");
+            System.out.println("1 - Registrar entrada");
             System.out.println("2 - Registrar Saida");
             System.out.println("3 - Exibir Vagas Livres");
             System.out.println("4 - Sair");

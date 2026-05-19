@@ -44,6 +44,7 @@ public class Estacionamento {
                 ticket.registrarSaida();
                 Tarifario tarifario = new Tarifario();
                 tarifario.calcularValor(ticket.calcularTempoEmHoras());
+
                 break;
             }
         }
@@ -59,6 +60,8 @@ public class Estacionamento {
         for(Vaga vaga: vagas){
             if(vaga.getOcupada() == false){
                 System.out.println("Vaga "  + vaga.getNumero() + " Livre");
+            }else{
+                System.out.println("Vaga " + vaga.getNumero() + " Ocupada pela placa:" + vaga.getVeiculoEstacionado().getPlaca());
             }
         }
     }
