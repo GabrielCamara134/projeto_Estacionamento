@@ -41,7 +41,7 @@ public class Main {
                     break;
                 case 2:
                     if(i>0) {
-                        System.out.print("Vamos registrar a saida do veiculo");
+                        System.out.println("Vamos registrar a saida do veiculo");
                         System.out.println("Digite o numero da placa do veiculo:");
                         placa = sc.nextLine();
                         estacionamento.registrarSaida(placa);
